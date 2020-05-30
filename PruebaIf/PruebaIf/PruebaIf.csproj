@@ -4,14 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{CD02A778-8F77-4276-9481-C6A1F0626998}</ProjectGuid>
-=======
-    <ProjectGuid>{74EE8D53-C9FE-4500-B62B-1F2448518ABC}</ProjectGuid>
->>>>>>> a94fff4a7b207c1d2a8137fb7dc72ad34ba1e692
+    <ProjectGuid>{059D2D55-2577-4FE0-86C2-E38A4CF30FAA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EjemploConversion</RootNamespace>
-    <AssemblyName>EjemploConversion</AssemblyName>
+    <RootNamespace>PruebaIf</RootNamespace>
+    <AssemblyName>PruebaIf</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmConvertir.cs">
+    <Compile Include="frmArranque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConvertir.Designer.cs">
-      <DependentUpon>frmConvertir.cs</DependentUpon>
+    <Compile Include="frmArranque.Designer.cs">
+      <DependentUpon>frmArranque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiguiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiguiente.Designer.cs">
+      <DependentUpon>frmSiguiente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmConvertir.resx">
-      <DependentUpon>frmConvertir.cs</DependentUpon>
+    <EmbeddedResource Include="frmArranque.resx">
+      <DependentUpon>frmArranque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiguiente.resx">
+      <DependentUpon>frmSiguiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

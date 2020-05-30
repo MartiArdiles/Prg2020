@@ -4,14 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{CD02A778-8F77-4276-9481-C6A1F0626998}</ProjectGuid>
-=======
-    <ProjectGuid>{74EE8D53-C9FE-4500-B62B-1F2448518ABC}</ProjectGuid>
->>>>>>> a94fff4a7b207c1d2a8137fb7dc72ad34ba1e692
+    <ProjectGuid>{E13DA5A5-7B85-40FD-A3DB-B0DB137BC72A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EjemploConversion</RootNamespace>
-    <AssemblyName>EjemploConversion</AssemblyName>
+    <RootNamespace>PruebaIf2</RootNamespace>
+    <AssemblyName>PruebaIf2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmConvertir.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConvertir.Designer.cs">
-      <DependentUpon>frmConvertir.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmConvertir.resx">
-      <DependentUpon>frmConvertir.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
