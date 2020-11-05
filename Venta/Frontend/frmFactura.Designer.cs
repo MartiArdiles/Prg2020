@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.paEncabezado = new System.Windows.Forms.Panel();
+            this.lblErrorEncabezado = new System.Windows.Forms.Label();
+            this.btConfirmar = new System.Windows.Forms.Button();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCuit = new System.Windows.Forms.TextBox();
@@ -49,15 +51,13 @@
             this.lblRenglones = new System.Windows.Forms.Label();
             this.txtTotalRenglon = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtUnitario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btCargarProducto = new System.Windows.Forms.Button();
-            this.btConfirmar = new System.Windows.Forms.Button();
-            this.lblErrorEncabezado = new System.Windows.Forms.Label();
             this.paEncabezado.SuspendLayout();
             this.paPie.SuspendLayout();
             this.paRenglones.SuspendLayout();
@@ -81,6 +81,25 @@
             this.paEncabezado.Name = "paEncabezado";
             this.paEncabezado.Size = new System.Drawing.Size(775, 114);
             this.paEncabezado.TabIndex = 0;
+            // 
+            // lblErrorEncabezado
+            // 
+            this.lblErrorEncabezado.AutoSize = true;
+            this.lblErrorEncabezado.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorEncabezado.Location = new System.Drawing.Point(68, 81);
+            this.lblErrorEncabezado.Name = "lblErrorEncabezado";
+            this.lblErrorEncabezado.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorEncabezado.TabIndex = 10;
+            // 
+            // btConfirmar
+            // 
+            this.btConfirmar.Location = new System.Drawing.Point(660, 81);
+            this.btConfirmar.Name = "btConfirmar";
+            this.btConfirmar.Size = new System.Drawing.Size(85, 23);
+            this.btConfirmar.TabIndex = 9;
+            this.btConfirmar.Text = "Confirmar";
+            this.btConfirmar.UseVisualStyleBackColor = true;
+            this.btConfirmar.Click += new System.EventHandler(this.btConfirmar_Click);
             // 
             // txtFecha
             // 
@@ -235,9 +254,9 @@
             this.paRenglones.Controls.Add(this.lblRenglones);
             this.paRenglones.Controls.Add(this.txtTotalRenglon);
             this.paRenglones.Controls.Add(this.label8);
-            this.paRenglones.Controls.Add(this.textBox7);
+            this.paRenglones.Controls.Add(this.txtUnitario);
             this.paRenglones.Controls.Add(this.label7);
-            this.paRenglones.Controls.Add(this.textBox6);
+            this.paRenglones.Controls.Add(this.txtProducto);
             this.paRenglones.Controls.Add(this.label6);
             this.paRenglones.Controls.Add(this.txtCantidad);
             this.paRenglones.Controls.Add(this.label5);
@@ -273,12 +292,12 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "$ Total";
             // 
-            // textBox7
+            // txtUnitario
             // 
-            this.textBox7.Location = new System.Drawing.Point(554, 49);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 15;
+            this.txtUnitario.Location = new System.Drawing.Point(554, 49);
+            this.txtUnitario.Name = "txtUnitario";
+            this.txtUnitario.Size = new System.Drawing.Size(100, 20);
+            this.txtUnitario.TabIndex = 15;
             // 
             // label7
             // 
@@ -289,12 +308,12 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "$ Unitario";
             // 
-            // textBox6
+            // txtProducto
             // 
-            this.textBox6.Location = new System.Drawing.Point(126, 49);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(413, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtProducto.Location = new System.Drawing.Point(126, 49);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(413, 20);
+            this.txtProducto.TabIndex = 13;
             // 
             // label6
             // 
@@ -329,25 +348,7 @@
             this.btCargarProducto.TabIndex = 9;
             this.btCargarProducto.Text = "Cargar Producto";
             this.btCargarProducto.UseVisualStyleBackColor = true;
-            // 
-            // btConfirmar
-            // 
-            this.btConfirmar.Location = new System.Drawing.Point(660, 81);
-            this.btConfirmar.Name = "btConfirmar";
-            this.btConfirmar.Size = new System.Drawing.Size(85, 23);
-            this.btConfirmar.TabIndex = 9;
-            this.btConfirmar.Text = "Confirmar";
-            this.btConfirmar.UseVisualStyleBackColor = true;
-            this.btConfirmar.Click += new System.EventHandler(this.btConfirmar_Click);
-            // 
-            // lblErrorEncabezado
-            // 
-            this.lblErrorEncabezado.AutoSize = true;
-            this.lblErrorEncabezado.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorEncabezado.Location = new System.Drawing.Point(68, 81);
-            this.lblErrorEncabezado.Name = "lblErrorEncabezado";
-            this.lblErrorEncabezado.Size = new System.Drawing.Size(0, 13);
-            this.lblErrorEncabezado.TabIndex = 10;
+            this.btCargarProducto.Click += new System.EventHandler(this.btCargarProducto_Click);
             // 
             // frmFactura
             // 
@@ -386,9 +387,9 @@
         private System.Windows.Forms.Button btCargarProducto;
         private System.Windows.Forms.TextBox txtTotalRenglon;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtUnitario;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblRenglones;

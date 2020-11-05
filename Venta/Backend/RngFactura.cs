@@ -13,12 +13,11 @@ namespace Backend
         public string producto = "";
         public decimal unitario = 0;
 
-
-
         #endregion
 
         #region Constructor
-
+        //usa el constructor estandar de todas las clases porque no hizo falta
+        //crear uno nuevo
         #endregion
 
         #region Metodos
@@ -26,8 +25,26 @@ namespace Backend
         {
             return cantidad * unitario;
         }
+
+        
+
+        public string MuestraRenglon()
+        {
+            return cantidad.ToString() + "                 " 
+                + producto 
+                + "                                        " 
+                + "$ " 
+                + unitario.ToString("#,##0.00")
+                + "                                        " 
+                + "$ " + Total().ToString();
+            
+        }
+
+        
+
+        }
         #endregion
 
 
-    }
+    
 }
